@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/fbBlue</color>
+    <color name="colorPrimaryDark">#038ed2</color>
+    <color name="colorAccent">@color/fbYellow</color>
+
+    <color name="fbYellow">#FFCA28</color>
+    <color name="fbAmber">#FFA000</color>
+    <color name="fbOrange">#F57C00</color>
+    <color name="fbBlue">#039BE5</color>
+    <color name="fbNavy">#2C384A</color>
+    <color name="fbGray">#ECEFF1</color>
+
+
+</resources>
