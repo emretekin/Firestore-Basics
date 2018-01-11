@@ -22,6 +22,7 @@ public class ActivitySplash extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(ActivitySplash.this, ActivityAddingData.class);
                 startActivity(intent);
+                finish();
             }
         }, 1500);
 
