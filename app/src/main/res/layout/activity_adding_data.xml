@@ -67,10 +67,24 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_bg"
+            android:background="@drawable/button_bg_yellow"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
             android:text="Save to Firestore"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnLoad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_bg_navy"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Load Data From Firestore"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
 
