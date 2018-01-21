@@ -3,7 +3,6 @@ package com.mobilemovement.firestorebasics.activities;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +17,7 @@ import com.mobilemovement.firestorebasics.R;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActivityAddingData extends AppCompatActivity {
+public class ActivityAddingData extends BaseActivity {
 
     private EditText etName;
     private Button btnSave;
@@ -29,18 +28,21 @@ public class ActivityAddingData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding_data);
 
-
+        firestore = FirebaseFirestore.getInstance();
         createViews();
-        initFirestore();
         setListeners();
     }
 
-    private void createViews() {
+    @Override
+    protected void createViews() {
+        super.createViews();
         etName = findViewById(R.id.etName);
         btnSave = findViewById(R.id.btnSave);
     }
 
-    private void setListeners() {
+    @Override
+    protected void setListeners() {
+        super.setListeners();
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,9 +72,5 @@ public class ActivityAddingData extends AppCompatActivity {
                 Snackbar.make(btnSave, "Error", Snackbar.LENGTH_LONG).show();
             }
         });
-    }
-
-    private void initFirestore() {
-        firestore = FirebaseFirestore.getInstance();
     }
 }

@@ -1,64 +1,50 @@
 package com.mobilemovement.firestorebasics.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
-import com.google.firebase.firestore.DocumentChange;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 import com.mobilemovement.firestorebasics.R;
-import com.mobilemovement.firestorebasics.adapters.UsersListAdapter;
-import com.mobilemovement.firestorebasics.models.Users;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ActivityMain extends BaseActivity {
 
-public class ActivityMain extends AppCompatActivity {
-
-    private static final String TAG = "FireLog";
-
-    private List<Users> usersList = new ArrayList<>();
-
-    private RecyclerView rvUsers;
-    private FirebaseFirestore mFirestore;
+    Button btnAddingData;
+    Button btnLoadData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvUsers = findViewById(R.id.rvUsers);
-        mFirestore = FirebaseFirestore.getInstance();
+        createViews();
+        setListeners();
+    }
 
+    @Override
+    protected void createViews() {
+        super.createViews();
+        btnAddingData = findViewById(R.id.btnAddingData);
+        btnLoadData = findViewById(R.id.btnLoadData);
+    }
 
-        final UsersListAdapter usersListAdapter = new UsersListAdapter(usersList, getApplicationContext());
-        rvUsers.setHasFixedSize(true);
-        rvUsers.setLayoutManager(new LinearLayoutManager(this));
-        rvUsers.setAdapter(usersListAdapter);
+    @Override
+    protected void setListeners() {
+        super.setListeners();
+        btnAddingData.setOnClickListener(this);
+        btnLoadData.setOnClickListener(this);
+    }
 
-        mFirestore.collection("Users").addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
-                if (e != null) {
-                    Log.d(TAG, "Error: " + e.getMessage());
-                }
+    @Override
+    public void onClick(View view) {
+        super.onClick(view);
+        switch (view.getId()) {
+            case R.id.btnAddingData:
+                startActivity(new Intent(ActivityMain.this, ActivityAddingData.class));
+                break;
 
-
-                for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
-                    if (doc.getType() == DocumentChange.Type.ADDED) {
-                        String userID = doc.getDocument().getId();
-
-                        Users users = doc.getDocument().toObject(Users.class).withId(userID);
-                        usersList.add(users);
-                        usersListAdapter.notifyDataSetChanged();
-                    }
-                }
-            }
-        });
+            case R.id.btnLoadData:
+                break;
+        }
     }
 }

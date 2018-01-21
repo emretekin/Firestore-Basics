@@ -20,7 +20,7 @@ public class ActivitySplash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(ActivitySplash.this, ActivityAddingData.class);
+                Intent intent = new Intent(ActivitySplash.this, ActivityMain.class);
                 startActivity(intent);
                 finish();
             }
