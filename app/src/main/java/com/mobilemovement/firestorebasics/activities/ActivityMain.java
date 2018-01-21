@@ -42,8 +42,8 @@ public class ActivityMain extends BaseActivity {
             case R.id.btnAddingData:
                 startActivity(new Intent(ActivityMain.this, ActivityAddingData.class));
                 break;
-
             case R.id.btnLoadData:
+                startActivity(new Intent(ActivityMain.this, ActivityLoadData.class));
                 break;
         }
     }

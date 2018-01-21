@@ -1,6 +1,7 @@
 package com.mobilemovement.firestorebasics.activities;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
@@ -65,6 +66,13 @@ public class ActivityAddingData extends BaseActivity {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 Snackbar.make(btnSave, "Username Added to Firestore.", Snackbar.LENGTH_LONG).show();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        finish();
+                    }
+                }, 1500);
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
