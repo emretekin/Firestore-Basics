@@ -24,23 +24,29 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp"
+                android:paddingBottom="@dimen/pm_10"
+                android:paddingTop="@dimen/pm_10"
                 android:src="@drawable/logo_firebase" />
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pm_10"
+        android:src="@drawable/logo_firestore" />
+
     <Button
         android:id="@+id/btnAddingData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/pm_30"
+        android:layout_marginRight="@dimen/pm_30"
+        android:layout_marginTop="@dimen/pm_20"
         android:background="@drawable/button_bg_yellow"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/pm_10"
+        android:paddingTop="@dimen/pm_10"
         android:text="Save to Firestore"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
@@ -49,13 +55,27 @@
         android:id="@+id/btnLoadData"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="@dimen/pm_30"
+        android:layout_marginRight="@dimen/pm_30"
+        android:layout_marginTop="@dimen/pm_20"
         android:background="@drawable/button_bg_navy"
-        android:paddingBottom="10dp"
-        android:paddingTop="10dp"
+        android:paddingBottom="@dimen/pm_10"
+        android:paddingTop="@dimen/pm_10"
         android:text="Load Data From Firestore"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnListData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pm_30"
+        android:layout_marginRight="@dimen/pm_30"
+        android:layout_marginTop="@dimen/pm_20"
+        android:background="@drawable/button_bg_navy"
+        android:paddingBottom="@dimen/pm_10"
+        android:paddingTop="@dimen/pm_10"
+        android:text="List Data"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 

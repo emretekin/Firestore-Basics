@@ -9,8 +9,7 @@ import com.mobilemovement.firestorebasics.R;
 
 public class ActivityMain extends BaseActivity {
 
-    Button btnAddingData;
-    Button btnLoadData;
+    Button btnAddingData, btnLoadData, btnListData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +25,7 @@ public class ActivityMain extends BaseActivity {
         super.createViews();
         btnAddingData = findViewById(R.id.btnAddingData);
         btnLoadData = findViewById(R.id.btnLoadData);
+        btnListData = findViewById(R.id.btnListData);
     }
 
     @Override
@@ -33,6 +33,7 @@ public class ActivityMain extends BaseActivity {
         super.setListeners();
         btnAddingData.setOnClickListener(this);
         btnLoadData.setOnClickListener(this);
+        btnListData.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +45,9 @@ public class ActivityMain extends BaseActivity {
                 break;
             case R.id.btnLoadData:
                 startActivity(new Intent(ActivityMain.this, ActivityLoadData.class));
+                break;
+            case R.id.btnListData:
+                startActivity(new Intent(ActivityMain.this, ActivityListData.class));
                 break;
         }
     }

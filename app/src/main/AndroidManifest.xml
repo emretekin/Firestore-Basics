@@ -27,7 +27,8 @@
         <activity
             android:name=".activities.ActivityAddingData"
             android:screenOrientation="portrait" />
-        <activity android:name=".activities.ActivityLoadData"></activity>
+        <activity android:name=".activities.ActivityLoadData" />
+        <activity android:name=".activities.ActivityListData"></activity>
     </application>
 
 </manifest>

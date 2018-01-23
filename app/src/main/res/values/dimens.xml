@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="pm_5">5dp</dimen>
+    <dimen name="pm_10">10dp</dimen>
+    <dimen name="pm_15">15dp</dimen>
+    <dimen name="pm_20">20dp</dimen>
+    <dimen name="pm_30">30dp</dimen>
+    <dimen name="pm_50">50dp</dimen>
 </resources>

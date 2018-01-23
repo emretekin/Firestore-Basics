@@ -25,6 +25,9 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected void setListeners() {
     }
 
+    protected void initRecyclerView() {
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

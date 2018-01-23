@@ -1,12 +1,11 @@
 package com.mobilemovement.firestorebasics.adapters;
 
-import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.mobilemovement.firestorebasics.R;
 import com.mobilemovement.firestorebasics.models.Users;
@@ -21,11 +20,9 @@ import java.util.List;
 public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.ViewHolder> {
 
     private List<Users> usersList = new ArrayList<>();
-    private Context context;
 
-    public UsersListAdapter(List<Users> usersList, Context context) {
+    public UsersListAdapter(List<Users> usersList) {
         this.usersList = usersList;
-        this.context = context;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -58,7 +55,7 @@ public class UsersListAdapter extends RecyclerView.Adapter<UsersListAdapter.View
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context, "USER ID" + userID, Toast.LENGTH_SHORT).show();
+                Snackbar.make(view, "USER ID = " + userID, Snackbar.LENGTH_LONG).show();
             }
         });
     }
