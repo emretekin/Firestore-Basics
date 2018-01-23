@@ -13,7 +13,7 @@ public class ActivitySplash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+//        setContentView(R.layout.activity_splash);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -22,6 +22,7 @@ public class ActivitySplash extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(ActivitySplash.this, ActivityMain.class);
                 startActivity(intent);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
         }, 1500);
