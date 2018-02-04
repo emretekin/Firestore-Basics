@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.mobilemovement.firestorebasics.activities.ActivityMain">
 
@@ -45,6 +46,7 @@
         android:layout_marginRight="@dimen/pm_30"
         android:layout_marginTop="@dimen/pm_20"
         android:background="@drawable/button_bg_yellow"
+        android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
         android:text="Save to Firestore"
@@ -59,6 +61,7 @@
         android:layout_marginRight="@dimen/pm_30"
         android:layout_marginTop="@dimen/pm_20"
         android:background="@drawable/button_bg_navy"
+        android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
         android:text="Load Data From Firestore"
@@ -73,6 +76,7 @@
         android:layout_marginRight="@dimen/pm_30"
         android:layout_marginTop="@dimen/pm_20"
         android:background="@drawable/button_bg_navy"
+        android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
         android:text="List Data"

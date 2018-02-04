@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context="com.mobilemovement.firestorebasics.activities.ActivityLoadData">
 
     <android.support.design.widget.AppBarLayout
@@ -46,6 +47,7 @@
             android:background="@drawable/button_bg_navy"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
+            android:fontFamily="@font/lorabold"
             android:text="Load Data From Firestore"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
