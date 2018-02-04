@@ -43,7 +43,7 @@
             android:layout_margin="20dp"
             android:fontFamily="@font/lorabold"
             android:gravity="center"
-            android:text="Welcome to Firestore"
+            android:text="@string/adding_title"
             android:textColor="@color/fbNavy"
             android:textSize="20sp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -57,7 +57,7 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/edittext_border"
-            android:hint="Enter Name..."
+            android:hint="@string/adding_ethint"
             android:inputType="textCapWords"
             android:maxLines="1"
             android:padding="15dp"
@@ -75,7 +75,7 @@
             android:background="@drawable/button_bg_yellow"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
-            android:text="Save to Firestore"
+            android:text="@string/main_savebutton"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
     </LinearLayout>

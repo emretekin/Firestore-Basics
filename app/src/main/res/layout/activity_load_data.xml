@@ -45,10 +45,10 @@
             android:layout_marginRight="30dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/button_bg_navy"
+            android:fontFamily="@font/lorabold"
             android:paddingBottom="10dp"
             android:paddingTop="10dp"
-            android:fontFamily="@font/lorabold"
-            android:text="Load Data From Firestore"
+            android:text="@string/main_loadbutton"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
     </LinearLayout>

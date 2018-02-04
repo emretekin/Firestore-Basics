@@ -54,7 +54,7 @@
         android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
-        android:text="Save to Firestore"
+        android:text="@string/main_savebutton"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
@@ -69,7 +69,7 @@
         android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
-        android:text="Load Data From Firestore"
+        android:text="@string/main_loadbutton"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 
@@ -84,7 +84,7 @@
         android:fontFamily="@font/lorabold"
         android:paddingBottom="@dimen/pm_10"
         android:paddingTop="@dimen/pm_10"
-        android:text="List Data"
+        android:text="@string/main_listbutton"
         android:textAllCaps="false"
         android:textColor="#FFFFFF" />
 

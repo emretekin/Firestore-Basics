@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/lorabold"
         android:padding="5dp"
-        android:text="Name"
-        android:textColor="@color/fbBlue" />
+        android:textColor="@color/fbBlue"
+        tools:text="Name" />
 
     <TextView
         android:id="@+id/tvStatus"
@@ -22,5 +22,5 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/loraregular"
         android:padding="5dp"
-        android:text="Status" />
+        tools:text="Status" />
 </LinearLayout>

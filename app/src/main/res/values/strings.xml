@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Firestore Basics</string>
 
+    <!--ActivityMain-->
+    <string name="main_savebutton">Save to Firestore</string>
+    <string name="main_loadbutton">Load Data From Firestore</string>
+    <string name="main_listbutton">List Data</string>
+
+    <!--ActivityAddingData-->
+    <string name="adding_title">Welcome to Firestore</string>
+    <string name="adding_ethint">Enter Name...</string>
 </resources>
