@@ -14,7 +14,7 @@
         <activity
             android:name=".activities.ActivitySplash"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.CenterAnimation">
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,16 +23,20 @@
         </activity>
         <activity
             android:name=".activities.ActivityMain"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".activities.ActivityAddingData"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".activities.ActivityLoadData"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".activities.ActivityListData"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

@@ -2,14 +2,18 @@ package com.mobilemovement.firestorebasics.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.mobilemovement.firestorebasics.R;
 
 public class ActivityMain extends BaseActivity {
 
     Button btnAddingData, btnLoadData, btnListData;
+    ImageView ivLogo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,7 @@ public class ActivityMain extends BaseActivity {
     @Override
     protected void createViews() {
         super.createViews();
+        ivLogo = findViewById(R.id.ivLogo);
         btnAddingData = findViewById(R.id.btnAddingData);
         btnLoadData = findViewById(R.id.btnLoadData);
         btnListData = findViewById(R.id.btnListData);
@@ -47,7 +52,9 @@ public class ActivityMain extends BaseActivity {
                 startActivity(new Intent(ActivityMain.this, ActivityLoadData.class));
                 break;
             case R.id.btnListData:
-                startActivity(new Intent(ActivityMain.this, ActivityListData.class));
+                Intent intent = new Intent(ActivityMain.this, ActivityListData.class);
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(ActivityMain.this, ivLogo, ViewCompat.getTransitionName(ivLogo));
+                startActivity(intent, options.toBundle());
                 break;
         }
     }

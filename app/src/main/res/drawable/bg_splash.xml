@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/logo_firebase_splash"/>
+            android:src="@drawable/logo_firebase"/>
     </item>
 
 </layer-list>

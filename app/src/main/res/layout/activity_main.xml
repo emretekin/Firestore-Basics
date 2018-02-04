@@ -33,10 +33,15 @@
     </android.support.design.widget.AppBarLayout>
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/ivLogo"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/pm_10"
-        android:src="@drawable/logo_firestore" />
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_firestore"
+        android:transitionName="simple_activity_transition"
+        tools:ignore="UnusedAttribute" />
 
     <Button
         android:id="@+id/btnAddingData"
